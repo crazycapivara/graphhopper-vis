@@ -1,9 +1,11 @@
-import getTileData from "./get-tile-data";
+const getTileData = require("./get-tile-data");
+// import getTileData from "./get-tile-data";
 
 const LAT = 52.518728;
 const LNG = 13.395767;
 
-export class Map {
+// export class Map {
+global.App = class {
     constructor(container, server, props) {
         this._server = server;
         this._createTooltipElement(container);

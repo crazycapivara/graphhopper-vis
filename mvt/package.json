@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
+    "browserify": "browserify ./src/app.js > ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

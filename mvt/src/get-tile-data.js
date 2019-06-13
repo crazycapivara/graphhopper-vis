@@ -1,7 +1,10 @@
-import { VectorTile } from "@mapbox/vector-tile";
-import Protobuf from "pbf"; 
+const VectorTile = require("@mapbox/vector-tile").VectorTile;
+const Protobuf = require("pbf");
+// import { VectorTile } from "@mapbox/vector-tile";
+// import Protobuf from "pbf";
 
-export default function(server) {
+// export default function(server) {
+module.exports = function(server) {
     return function({ x, y, z }) {
         const mapSource = `${server}/mvt/${z}/${x}/${y}.mvt`;
         return fetch(mapSource)
