@@ -39,7 +39,7 @@ export class Map {
                 pickable: true,
                 onHover: ({ object }) => {
                     if (object) {
-                        this._tooltip.innerHTML = `${object.properties.name}`;
+                        this._tooltip.innerHTML = `${object.properties.name || "no name"}, speed: ${object.properties.speed}`;
                     } else { this._tooltip.innerHTML = ""; }
                 }
             })
